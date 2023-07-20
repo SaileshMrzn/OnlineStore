@@ -1,37 +1,30 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import "../style.css";
 
 export default function Items(props) {
   return (
     <>
-      <div className="card mx-3 my-3" style={{ width: "20rem" }}>
-        <Link id="link" to={`/item/${props.id}`}>
-          <div className="text-center product-image">
+      <div className="xl:w-1/4 md:w-1/2 p-5">
+        <div className="border-solid border-2 border-grey-100 p-6 rounded-lg">
+          <Link to={`/item/${props.id}`} className="hover:text-pink-600">
             <img
+              className="h-52 rounded object-center mb-6 mx-auto"
               src={props.image}
-              className="card-img-top"
-              alt="..."
-              style={{ width: "70%", height: "70%" }}
+              alt="content"
             />
-          </div>
-          <div className="card-body">
-            <h5 className="card-title">{props.title}</h5>
-          </div>
-        </Link>
-        <ul className="list-group list-group-flush">
-          <li className="list-group-item">${props.price}</li>
-          <li className="list-group-item">
-            Rating: {props.rate} {""}
-            <span className="font-italic" style={{ color: "grey" }}>
-              ({props.count})
-            </span>
-          </li>
-          <li className="list-group-item">
-            Category:{" "}
-            {props.category.charAt(0).toUpperCase() + props.category.slice(1)}
-          </li>
-        </ul>
+            <div className="mt-4">
+              <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
+                {props.category.charAt(0).toUpperCase() +
+                  props.category.slice(1)}
+              </h3>
+              <h2 className="title-font text-lg font-medium">
+                {props.title.substring(0, 20)}...
+              </h2>
+              <p className="mt-1">${props.price}</p>
+            </div>
+          </Link>
+        </div>
       </div>
     </>
   );

@@ -1,18 +1,5 @@
-.product-image {
-  height: 25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#link {
-  text-decoration: none;
-  color: black;
-}
-
 #link:hover {
-  color: #e15f97;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.12s ease-in-out;
 }
 
 #searchProducts {
@@ -20,22 +7,10 @@
   padding: 8px 20px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   position: relative;
 }
 
 #searchProducts:focus {
   outline: none;
-  border: 2px solid #e15f97;
-}
-
-.itemDetails {
-  width: 30%;
-  margin: 1rem 2rem;
-}
-
-.itemDetailsContainer {
-  height: 90vh;
-  display: flex;
-  align-items: center;
+  border: 1px solid #e15f97;
 }

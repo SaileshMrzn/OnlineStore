@@ -1,44 +1,26 @@
-import React from "react";
+// import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <>
-      <nav
-        className="navbar navbar-expand-lg bg-body-tertiary"
-        data-bs-theme="dark"
-      >
-        <div className="container-fluid">
-          <a className="navbar-brand" href="/">
-            OnlineStore
+      <header className="text-gray-600 body-font bg-cyan-200 bg-opacity-40 shadow-md">
+        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <a href="/" className="ml-3 text-xl">
+              OnlineStore
+            </a>
           </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link active" to="/search">
-                  Search
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <Link className="mr-5 hover:text-pink-600" to="/">
+              Home
+            </Link>
+            <Link className="mr-5 hover:text-pink-600" to="/search">
+              Search
+            </Link>
+          </nav>
         </div>
-      </nav>
+      </header>
     </>
   );
 }

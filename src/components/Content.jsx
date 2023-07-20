@@ -1,7 +1,7 @@
-import React from "react";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import Items from "./Items";
+import Footer from "./Footer";
 
 export default function Content() {
   const query = useQuery({
@@ -13,14 +13,25 @@ export default function Content() {
     },
   });
 
-  if (query.isLoading) return <h2 className="text-center my-3">Loading....</h2>;
+  if (query.isLoading)
+    return (
+      <h2 className="text-gray-900 title-font text-center text-xl my-3">
+        Loading....
+      </h2>
+    );
   if (query.isError)
-    return <h2 className="text-center my-3">Error loading data!!!</h2>;
+    return (
+      <h2 className="text-gray-900 title-font text-center text-xl my-3">
+        Error loading data!!!
+      </h2>
+    );
 
   return (
     <>
-      <h2 className="text-center my-3">Top Deals</h2>
-      <div className="d-flex flex-wrap justify-content-center">
+      <h2 className="text-gray-900 title-font text-center text-xl my-3 mt-6">
+        Top Deals
+      </h2>
+      <div className="flex flex-wrap justify-center mx-auto container">
         {query.data.map((item) => (
           <Items
             id={item.id}
@@ -35,6 +46,7 @@ export default function Content() {
           />
         ))}
       </div>
+      <Footer />
     </>
   );
 }

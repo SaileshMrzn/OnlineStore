@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import Items from "./Items";
 import "../style.css";
@@ -33,20 +33,20 @@ export default function Search() {
 
   return (
     <>
-      <div className="d-flex justify-content-center align-items-center my-3">
+      <div className="flex justify-center my-3 mt-6">
         <form action="">
           <input
+            className="drop-shadow-md"
             type="text"
             name="search"
             id="searchProducts"
             placeholder="Search for Products"
             onChange={(e) => setSearch(e.target.value)}
           />
-          <i className="fa-solid fa-magnifying-glass searchIcon"></i>
         </form>
       </div>
 
-      <div className="d-flex flex-wrap justify-content-center">
+      <div className="flex flex-wrap justify-center mx-auto container">
         {filteredItems.map((val) => (
           <Items
             id={val.id}
