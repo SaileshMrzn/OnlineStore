@@ -2,7 +2,6 @@ import Navbar from "./components/Navbar";
 import Search from "./components/Search";
 import Content from "./components/Content";
 import ItemDetails from "./components/ItemDetails";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
