@@ -18,7 +18,7 @@ export default function Navbar() {
             <Link className="mr-5 hover:text-pink-600" to="/">
               Home
             </Link>
-            <Link className="mr-5 ml-5 hover:text-pink-600" to="/search">
+            <Link className="hover:text-pink-600" to="/search">
               Search
             </Link>
           </nav>
