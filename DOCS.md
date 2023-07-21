@@ -1,20 +1,16 @@
-
 # Assignment Title: E-commerce Development Task
 
 ## Description
+
 In this assignment, basic e-commerce application was made using React.js. Key react concepts were used to develop a multi-page web application named "OnlineStore" that allows users to browse and search for products.
 
-
 ## Technologies used
+
 - React.js
-- Tailwind CSS
+- Tailwind CSS, tailblocks
 - Tanstack query, axios
 - Git
 - Vercel
-
-
-
-
 
 ## Run Locally
 
@@ -42,7 +38,6 @@ Start the server
   npm run dev
 ```
 
-
 ## Deployment
-https://frontend-assignment-2-sailesh.vercel.app/
 
+https://frontend-assignment-2-sailesh.vercel.app/
