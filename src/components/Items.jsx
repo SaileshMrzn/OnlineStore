@@ -8,11 +8,13 @@ export default function Items(props) {
       <div className="xl:w-1/4 md:w-1/2 p-5">
         <div className="border-solid border-2 border-grey-100 p-6 rounded-lg">
           <Link to={`/item/${props.id}`} className="hover:text-pink-600">
-            <img
-              className="h-52 rounded object-center mb-6 mx-auto"
-              src={props.image}
-              alt="content"
-            />
+            <div className="h-60 items-center justify-center flex">
+              <img
+                className="h-[82%] rounded object-center mb-6 mx-auto"
+                src={props.image}
+                alt="content"
+              />
+            </div>
             <div className="mt-4">
               <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                 {props.category.charAt(0).toUpperCase() +
