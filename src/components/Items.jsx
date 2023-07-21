@@ -10,7 +10,7 @@ export default function Items(props) {
           <Link to={`/item/${props.id}`} className="hover:text-pink-600">
             <div className="h-60 items-center justify-center flex">
               <img
-                className="h-[82%] rounded object-center mb-6 mx-auto"
+                className="h-[75%] rounded object-center mb-6 mx-auto"
                 src={props.image}
                 alt="content"
               />
